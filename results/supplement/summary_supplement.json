@@ -1,0 +1,39 @@
+{
+  "inflation_pp_mean": 8.419623004339531,
+  "inflation_pp_by_dataset": {
+    "BreastEW": 3.285527609584436,
+    "IonosphereEW": 7.351777330650568,
+    "SonarEW": 14.62156407278359
+  },
+  "inflation_pp_exact_suite": 6.492717840161436,
+  "gain_vs_all_N_pp": {
+    "BreastEW": -0.7743362831858512,
+    "IonosphereEW": 2.490945674044265,
+    "SonarEW": -3.1276616337591943
+  },
+  "gain_vs_all_L_pp": {
+    "BreastEW": 2.5111913263985843,
+    "IonosphereEW": 9.842723004694834,
+    "SonarEW": 11.493902439024394
+  },
+  "test_acc_spread_across_methods_pp": {
+    "BreastEW": 1.7574910728147763,
+    "IonosphereEW": 2.4245472837022164,
+    "SonarEW": 9.111498257839724
+  },
+  "tau_fitness_vs_test": -0.38770175433269616,
+  "reach_best_known_N": {
+    "GA": 0.05555555555555555,
+    "PSO-S": 0.0,
+    "PSO-V": 0.0022222222222222222,
+    "GWO-S": 0.0,
+    "GWO-V": 0.0,
+    "WOA-S": 0.02444444444444445,
+    "WOA-V": 0.0,
+    "SCA-S": 0.0,
+    "SCA-V": 0.0,
+    "RS": 0.0,
+    "EA": 0.08888888888888886,
+    "SFS": 0.1311111111111111
+  }
+}
