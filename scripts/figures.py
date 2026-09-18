@@ -110,7 +110,8 @@ for m in SEARCH:
     ax.plot(range(3), rk.loc[m, cols].values, **style(m))
 ax.set_xticks(range(3), ["Best of 30", "Mean", "Median"])
 ax.set_xlim(-0.15, 2.15)
-ax.invert_yaxis()
+lo, hi = rk[cols].values.min(), rk[cols].values.max()
+ax.set_ylim(hi + 0.25 * (hi - lo) + 0.2, lo - 0.1 * (hi - lo) - 0.1)
 ax.set_ylabel("Mean rank across datasets (1 = best)")
 p3 = summary["P3"]
 label(ax, "a", "Rank by summary statistic")
@@ -142,7 +143,9 @@ labels = SEARCH + ["ALL", "exhaustive_optimum"]
 vals = [p2[m]["inflation_pp"] for m in labels]
 cis = [p2[m]["ci"] for m in labels]
 order = np.argsort(vals)
-fig, axes = plt.subplots(1, 2, figsize=(W, 2.8), layout="constrained", width_ratios=[1, 1.1])
+fig = plt.figure(figsize=(W, 5.0), layout="constrained")
+gs = fig.add_gridspec(2, 2, height_ratios=[1, 0.9], width_ratios=[1, 1.1])
+axes = [fig.add_subplot(gs[0, 0]), fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[1, :])]
 ax = axes[0]
 for pos, i in enumerate(order):
     m = labels[i]
@@ -172,6 +175,28 @@ ax.set_xlabel("Top share of subsets by validation fitness")
 ax.set_ylabel("Validation minus test accuracy, pp")
 label(ax, "b", "Optimism of stricter selection")
 ax.legend(frameon=False, loc="upper left")
+ax = axes[2]
+test_n = read("p2_test_acc_N", index_col=0).loc[EXACT]
+rep_l = read("p2_reported_acc_L", index_col=0).loc[EXACT]
+exo = read("e_exhaustive_optimum", index_col=0).groupby("dataset").exhaustive_N_test.mean()
+gain_n = (test_n[SEARCH].mean(axis=1) - test_n["ALL"]) * 100
+gain_l = (rep_l[SEARCH].mean(axis=1) - rep_l["ALL"]) * 100
+gain_x = (exo.reindex(EXACT) - test_n["ALL"]) * 100
+ds_order = gain_n.sort_values().index
+xs = np.arange(len(ds_order))
+for x, ds in zip(xs, ds_order):
+    ax.plot([x, x], [gain_n[ds], gain_l[ds]], color="#BBBBBB", lw=0.9, zorder=1)
+ax.scatter(xs, gain_l[ds_order], s=20, marker="s", facecolor="white", edgecolor="#D55E00", zorder=3,
+           label="Reported under the common protocol (L)")
+ax.scatter(xs, gain_n[ds_order], s=20, color="#0072B2", zorder=3, label="Leak-free test accuracy (N)")
+ax.scatter(xs, gain_x[ds_order], s=12, marker="D", color="#000000", zorder=4,
+           label="Exact optimum, leak-free (N)")
+ax.axhline(0, color="#888888", lw=0.6)
+ax.set_xticks(xs, ds_order, rotation=35, ha="right")
+ax.set_ylabel("Gain over all features, pp")
+n_worse = int((gain_n < 0).sum())
+label(ax, "c", f"Apparent and actual benefit of selection ({n_worse} of {len(gain_n)} datasets lose accuracy)")
+ax.legend(frameon=False, loc="upper left", fontsize=5.8)
 fig.savefig(FIG / "fig4_leakage.pdf")
 plt.close(fig)
 

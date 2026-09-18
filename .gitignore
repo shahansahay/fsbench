@@ -5,3 +5,4 @@ tables/*/*.npy
 tables/*/*.npz
 results/raw/
 .DS_Store
+results/supplement/raw/
