@@ -1,0 +1,13 @@
+dataset,min,mean,max
+Breastcancer,0.964286,0.984265,0.992857
+CongressEW,0.977011,0.98618,0.988506
+Exactly,1,1,1
+Exactly2,0.785,0.791,0.795
+HeartEW,0.87037,0.918519,1
+Lymphography,0.866667,0.945977,1
+M-of-n,1,1,1
+SpectEW,0.87037,0.91761,0.962963
+Tic-tac-toe,0.837696,0.845501,0.859375
+Vote,0.966667,0.99,1
+WineEW,1,1,1
+Zoo,1,1,1

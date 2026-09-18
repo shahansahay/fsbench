@@ -1,0 +1,15 @@
+{
+  "created": "2026-09-18T21:22:22+00:00",
+  "git_commit": "eff18ed7712941ee26ae8989ab1a82f41f65a0b1",
+  "python": "3.12.13",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "scipy": "1.17.1",
+  "sklearn": "1.8.0",
+  "numba": "0.67.0",
+  "runs": 129960,
+  "groups": 360,
+  "base_seed": 20260919,
+  "reps": 30
+}

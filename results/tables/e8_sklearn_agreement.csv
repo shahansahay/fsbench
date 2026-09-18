@@ -1,0 +1,13 @@
+dataset,sklearn_error_agreement
+Breastcancer,0.760797
+CongressEW,0.782392
+Exactly,0.322259
+Exactly2,0.360465
+HeartEW,0.960133
+Lymphography,0.742525
+M-of-n,0.363787
+SpectEW,0.692691
+Tic-tac-toe,0.302326
+Vote,0.774086
+WineEW,0.928571
+Zoo,0.684385
