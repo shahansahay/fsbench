@@ -1,0 +1,37 @@
+{
+  "X1": {
+    "optimisation: hit rate": {
+      "chi2": 60.96190761847627,
+      "p": 6.141536800558947e-09,
+      "kendall_w": 0.46183263347330505,
+      "best": "GA",
+      "worst": "WOA-V",
+      "mean_rank_best": 1.9583333333333333,
+      "mean_rank_worst": 8.791666666666666
+    },
+    "optimisation: validation fitness": {
+      "chi2": 56.369531966962306,
+      "p": 4.346055285816368e-08,
+      "kendall_w": 0.42704190884062354,
+      "best": "PSO-S",
+      "worst": "SFS",
+      "mean_rank_best": 2.5416666666666665,
+      "mean_rank_worst": 10.791666666666666
+    },
+    "generalisation: leak-free test accuracy": {
+      "chi2": 7.383754397185784,
+      "p": 0.7672095564781471,
+      "kendall_w": 0.05593753331201352,
+      "best": "PSO-V",
+      "worst": "EA",
+      "mean_rank_best": 5.166666666666667,
+      "mean_rank_worst": 7.916666666666667
+    }
+  },
+  "X2_rope_1pp": {
+    "min_p_equivalent": 0.67698,
+    "median_p_equivalent": 0.88341,
+    "max_p_method_better": 0.32172,
+    "max_p_control_better": 0.11212
+  }
+}
