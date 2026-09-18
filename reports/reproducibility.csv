@@ -1,0 +1,14 @@
+kind,group,runs,identical,seconds
+main,main_Breastcancer_f4_L_a0.99_b1000,361,True,0.9
+main,alpha_CongressEW_f0_N_a0.9_b1000,361,True,1.0
+main,main_Exactly_f0_N_a0.99_b1000,361,True,1.0
+main,main_Exactly2_f3_L_a0.99_b1000,361,True,0.9
+main,budget_HeartEW_f1_N_a0.99_b3000,361,True,2.8
+main,budget_Lymphography_f2_N_a0.99_b100,361,True,0.1
+main,budget_M-of-n_f0_N_a0.99_b100,361,True,0.1
+main,alpha_SpectEW_f1_N_a0.9_b1000,361,True,1.2
+main,main_Tic-tac-toe_f3_L_a0.99_b1000,361,True,0.9
+main,budget_Vote_f1_N_a0.99_b3000,361,True,2.9
+main,main_WineEW_f4_N_a0.99_b1000,361,True,0.9
+main,alpha_Zoo_f3_N_a0.9_b1000,361,True,1.0
+supplement,supp_SonarEW_f3_L,361,True,41.7
