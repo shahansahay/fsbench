@@ -1,0 +1,14 @@
+{
+  "X3_selection_vs_all_features": {
+    "n": 12,
+    "sum_positive_ranks": 35.0,
+    "p": 0.791015625,
+    "datasets_below_all": 7,
+    "mean_gain_pp": 1.691375694444444
+  },
+  "X4_local_optima_vs_hit_rate": {
+    "n": 12,
+    "spearman": 0.8041958041958043,
+    "p": 0.0016147689860699312
+  }
+}
