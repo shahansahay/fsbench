@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: If you use this software or these result files, please cite them as below.
+title: "fsbench: exhaustive feature subset references and a leak-free benchmark of binary metaheuristics"
+abstract: >-
+  Exhaustively computed error tables over every non-empty feature subset of 12
+  public datasets, and a pre-specified benchmark of nine binary metaheuristic
+  variants against three controls under leak-free and leaky evaluation
+  protocols.
+type: software
+authors:
+  - family-names: Sahay
+    given-names: Shahan
+    affiliation: "School of Computer Science and Engineering, Vellore Institute of Technology, Chennai, India"
+  - family-names: Jaiswal
+    given-names: Avishkar
+    affiliation: "School of Electronics Engineering, Vellore Institute of Technology, Chennai, India"
+  - family-names: Yadav
+    given-names: Harsh
+    affiliation: "School of Electronics Engineering, Vellore Institute of Technology, Chennai, India"
+  - family-names: Tiwari
+    given-names: Ravi
+    affiliation: "School of Electronics Engineering, Vellore Institute of Technology, Chennai, India"
+  - family-names: Gupta
+    given-names: Shivani
+    affiliation: "School of Computer Science and Engineering, Vellore Institute of Technology, Chennai, India"
+license: MIT
+version: paper-v1
+date-released: "2026-10-01"
+keywords:
+  - feature selection
+  - metaheuristics
+  - benchmarking
+  - data leakage
+  - evolutionary computation
+  - wrapper methods
