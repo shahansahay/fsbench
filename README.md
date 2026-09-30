@@ -1,4 +1,4 @@
-# Reference-anchored benchmarking of binary metaheuristic feature selection
+# fsbench: exact feature subset references and a leak-free benchmark of binary metaheuristics
 
 [![Code DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23070324.svg)](https://doi.org/10.5281/zenodo.23070324)
 [![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23070390.svg)](https://doi.org/10.5281/zenodo.23070390)
