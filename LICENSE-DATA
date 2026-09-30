@@ -1,0 +1,20 @@
+Licence for data and result files
+=================================
+
+Code in this repository (fsb/, scripts/, tests/, reproduce.sh) is released
+under the MIT Licence; see LICENSE.
+
+Everything that is not code is released under the Creative Commons
+Attribution 4.0 International Licence (CC BY 4.0). This covers:
+
+  results/      summary files, per-endpoint tables, run-level tables
+  reports/      verification and reproducibility reports
+  tables/       the index of exhaustive error tables
+  figures/      figure artwork
+  CHECKSUMS.txt
+
+Licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+The files in data/raw are not original to this study. They are redistributed
+under the terms of their own licences; see DATA-ATTRIBUTION.md for the
+sources and the required credit.
