@@ -1,5 +1,10 @@
 # Reference-anchored benchmarking of binary metaheuristic feature selection
 
+[![Code DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23070324.svg)](https://doi.org/10.5281/zenodo.23070324)
+[![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23070390.svg)](https://doi.org/10.5281/zenodo.23070390)
+[![Code licence: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![Data licence: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
+
 Code, exact lookup tables and results for the accompanying manuscript.
 
 ## Contents
@@ -40,3 +45,23 @@ each run's identifiers, so every run is reproducible on its own.
 ## Provenance
 `results/provenance.json` records the git commit, platform and library versions that produced
 the results. `CHECKSUMS.txt` lists SHA-256 values of the main result files.
+
+
+## Availability
+
+Code, result files and the 18 data files of the suite: this repository, release
+`paper-v1`, archived at https://doi.org/10.5281/zenodo.23070324 (MIT for code,
+CC BY 4.0 for result files and tables).
+
+The 120 exhaustive subset tables (91 MB uncompressed, 120 .npy arrays over
+12 datasets and 5 outer folds, validation and test) are deposited separately at
+https://doi.org/10.5281/zenodo.23070390 (CC BY 4.0). They are not stored in git
+because they are large binary arrays; `reproduce.sh` rebuilds them in 984 s on
+an Apple M2 MacBook Air.
+
+Tags: `plan-v1` (16d510d, analysis plan frozen before any run), `eff18ed`
+(methods, runner and analysis fixed before any run), `results-v1` (4e51919,
+frozen results), `paper-v1` (archived release).
+
+Data files in `data/raw` derive from the UCI Machine Learning Repository and are
+credited in DATA-ATTRIBUTION.md.
