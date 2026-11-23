@@ -43,11 +43,14 @@ quantised to 1e-9, distance ties to the lower training index, vote ties to the c
 nearest tied neighbour (see the docstring of `fsb/tables.py`). Seeds are derived from the MD5 of
 each run's identifiers, so every run is reproducible on its own.
 
-## Analyses added after the results were frozen (X5 to X10)
+## Analyses added after the results were frozen (X5 to X11)
 `REVISION_PLAN.md` was committed and tagged `revision-plan-v1` (e856581, 23 November 2026) before any
-of these analyses ran; `revision-plan-amendment-1` added X8c before the runs on the Apple M2 machine.
-Their results are in `results/revision/` (`summary_revision.json` collects every number) and are
-tagged `revision-results-v1`.
+of these analyses ran. Two amendments followed, each committed and tagged before the analysis it adds
+was run: `revision-plan-amendment-1` added X8c before the runs on the Apple M2 machine, and
+`revision-plan-amendment-2` (b676f81) added the size-matched control X11 after the result of X5 was
+known. All of these analyses are exploratory. Their results are in `results/revision/`
+(`summary_revision.json` collects every number); X5 to X10 are tagged `revision-results-v1`, and X11
+and the Linux run of X8b are tagged `revision-results-v2`.
 
     python scripts/revision_x7_x9.py                          # X7 power and equivalence, X9 variance
     python scripts/revision_x5.py build && python scripts/revision_x5.py run --workers 8 && python scripts/revision_x5.py analyze
@@ -55,10 +58,14 @@ tagged `revision-results-v1`.
     python scripts/revision_x8.py compare --workers 8 && python scripts/revision_x8.py build --workers 8 && python scripts/revision_x8.py run --workers 8 && python scripts/revision_x8.py analyze
     python scripts/revision_x8.py compare_platforms           # X8c, needs the subset files of both machines
     python scripts/revision_x10.py                            # X10, rebuild of the tables with d <= 16
+    python scripts/revision_x11.py build && python scripts/revision_x11.py run --workers 8 && python scripts/revision_x11.py analyze
 
-The half tables (X5) and the deduplicated tables (X6) are rebuilt by these scripts and are not
-stored in git; their SHA-256 values are in `results/revision/x5_tables/index.csv` and
-`results/revision/x6_tables/index.csv`.
+The half tables (X5), the deduplicated tables (X6) and the fifth-part tables (X11) are rebuilt by
+these scripts and are not stored in git; their SHA-256 values are in
+`results/revision/x5_tables/index.csv`, `results/revision/x6_tables/index.csv` and
+`results/revision/x11_tables/index.csv`. Files whose names end in `darwin-arm64` come from the Apple M2
+machine and files ending in `linux-x86_64` from a Linux virtual machine; X8 writes one set per machine
+because scikit-learn's error counts differ between the two (X8c).
 
 ## Provenance
 `results/provenance.json` records the git commit, platform and library versions that produced
@@ -68,7 +75,7 @@ the results. `CHECKSUMS.txt` lists SHA-256 values of the main result files.
 ## Availability
 
 Code, result files and the 18 data files of the suite: this repository, releases
-`paper-v1` and `paper-v2`, archived under the concept DOI https://doi.org/10.5281/zenodo.23070324 (MIT for code,
+`paper-v1`, `paper-v2` and `paper-v3`, archived under the concept DOI https://doi.org/10.5281/zenodo.23070324 (MIT for code,
 CC BY 4.0 for result files and tables).
 
 The 120 exhaustive subset tables (91 MB uncompressed, 120 .npy arrays over
@@ -81,7 +88,9 @@ Tags: `plan-v1` (16d510d, analysis plan frozen before any run), `eff18ed`
 (methods, runner and analysis fixed before any run), `results-v1` (4e51919,
 frozen results), `paper-v1` (archived release), `revision-plan-v1` (e856581,
 plan of X5 to X10 frozen before they ran), `revision-plan-amendment-1`,
-`revision-results-v1`, and `paper-v2` (archived release of the revised manuscript).
+`revision-results-v1`, `paper-v2` (archived release), `revision-plan-amendment-2`
+(b676f81, X11 specified before it ran), `revision-results-v2`, and `paper-v3`
+(archived release that matches the manuscript).
 
 Data files in `data/raw` derive from the UCI Machine Learning Repository and are
 credited in DATA-ATTRIBUTION.md.

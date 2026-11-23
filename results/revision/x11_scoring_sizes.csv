@@ -1,0 +1,13 @@
+dataset,n_scoring_mean,n_inner_val
+Breastcancer,111.84,111.8
+CongressEW,69.44,70
+Exactly,160,160
+Exactly2,160,160
+HeartEW,43.2,43
+Lymphography,23.68,24
+M-of-n,160,160
+SpectEW,42.72,43
+Tic-tac-toe,153.28,153
+Vote,48,48
+WineEW,28.48,28.2
+Zoo,16.16,16.8

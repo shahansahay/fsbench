@@ -1,0 +1,10 @@
+,original,original,original,sklearn,sklearn,sklearn
+,leak_free_opt_pct,optimism_pp,inflation_opt_pp,leak_free_opt_pct,optimism_pp,inflation_opt_pp
+dataset,,,,,,
+Breastcancer,95.6701,2.00365,2.75642,95.9214,1.75237,2.50514
+Exactly,100,0,0,100,0,0
+Exactly2,71.6,9.025,7.5,72.75,7.5,6.85
+HeartEW,76.2963,17.1921,15.5556,76.6667,16.3566,15.1852
+M-of-n,100,0,0,100,0,0
+Tic-tac-toe,78.8094,5.37356,5.74062,78.7047,5.21683,5.84424
+WineEW,92.5516,7.44841,7.44841,92.996,7.00397,7.00397
