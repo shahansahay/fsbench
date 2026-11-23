@@ -1,0 +1,9 @@
+dataset,n,n_dedup,classes,classes_dedup,smallest_class_dedup
+Breastcancer,699,464,2,2,226
+Exactly,1000,930,2,2,292
+Exactly2,1000,947,2,2,230
+M-of-n,1000,944,2,2,347
+CongressEW,434,286,2,2,95
+Vote,300,254,2,2,88
+Zoo,101,59,7,7,4
+SpectEW,267,210,2,2,24

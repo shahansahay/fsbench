@@ -6,3 +6,10 @@ tables/*/*.npz
 results/raw/
 .DS_Store
 results/supplement/raw/
+results/revision/x5_tables/*/*.npy
+results/revision/x5_tables/*/*.npz
+results/revision/x6_tables/*/*.npy
+results/revision/x6_tables/*/*.npz
+results/revision/x5_raw/
+results/revision/x6_raw/
+results/revision/x8_raw_*/

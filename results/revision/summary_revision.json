@@ -1,0 +1,383 @@
+{
+  "X7": {
+    "wilcoxon_implementation_max_abs_dev_from_scipy": 0.0,
+    "mde_pp_alpha_0p05": {
+      "min": 0.6,
+      "median": 2.6,
+      "max": 3.4
+    },
+    "mde_pp_alpha_holm_first_step": {
+      "min": 0.7,
+      "median": 3.0,
+      "max": 4.3
+    },
+    "equivalent_1pp": {
+      "EA": [
+        "GA",
+        "PSO-S",
+        "PSO-V",
+        "GWO-S",
+        "GWO-V",
+        "WOA-S",
+        "SCA-S",
+        "SCA-V"
+      ],
+      "SFS": []
+    },
+    "equivalent_0p5pp": {
+      "EA": [],
+      "SFS": []
+    }
+  },
+  "X9": {
+    "share_pct": {
+      "dataset": 76.30795954405315,
+      "method": 0.5141593632145423,
+      "protocol": 13.267328789095728,
+      "dataset_x_method": 3.309554037477959,
+      "dataset_x_protocol": 6.413226449684623,
+      "method_x_protocol": 0.01048104957093697,
+      "three_way": 0.17729076690327486
+    },
+    "datasets_with_positive_mean_inflation": 12,
+    "positive_dataset_counts_per_method": {
+      "GA": 10,
+      "PSO-S": 10,
+      "PSO-V": 10,
+      "GWO-S": 12,
+      "GWO-V": 12,
+      "WOA-S": 12,
+      "WOA-V": 12,
+      "SCA-S": 10,
+      "SCA-V": 11,
+      "RS": 12,
+      "EA": 10,
+      "SFS": 12
+    },
+    "ratio_inflation_to_range": {
+      "min": 0.1338199513381998,
+      "median": 4.3936504361624085,
+      "max": 12.91666666666625
+    },
+    "median_seed_sd_pp": 2.5301353279737895,
+    "spearman_inflation_vs_scale": {
+      "rho": 0.6690306744437988,
+      "p": 0.01735219250540727,
+      "n": 12
+    }
+  },
+  "X5": {
+    "leak": {
+      "mean_pp": 9.703787014165236,
+      "ci": [
+        5.98789083186889,
+        13.642888565043966
+      ],
+      "wilcoxon_p": 0.00048828125,
+      "per_method_mean_pp": {
+        "GA": 10.04644820516579,
+        "PSO-S": 10.453296309740763,
+        "PSO-V": 9.414706754571776,
+        "GWO-S": 9.493145478522164,
+        "GWO-V": 9.69115222276118,
+        "WOA-S": 9.629492638407916,
+        "WOA-V": 9.34481018150392,
+        "SCA-S": 9.84301544342305,
+        "SCA-V": 9.602436825030905,
+        "RS": 9.453460406613639,
+        "EA": 9.537002646196946,
+        "SFS": 9.936477058044778
+      },
+      "all_features_mean_pp": 0.0,
+      "per_dataset_pp": {
+        "Breastcancer": 4.648236034564879,
+        "CongressEW": 5.201758028792911,
+        "Exactly": 0.8511551155115514,
+        "Exactly2": 7.789922325565896,
+        "HeartEW": 15.354938271604938,
+        "Lymphography": 23.038690476190478,
+        "M-of-n": 0.5215992432576594,
+        "SpectEW": 18.43508343508344,
+        "Tic-tac-toe": 6.269663836890337,
+        "Vote": 6.678995179829439,
+        "WineEW": 11.957801212590303,
+        "Zoo": 15.697601010101016
+      }
+    },
+    "config": {
+      "mean_pp": -1.7935043689555747,
+      "ci": [
+        -3.144558506637792,
+        -0.5648781030359795
+      ],
+      "wilcoxon_p": 0.02685546875,
+      "per_method_mean_pp": {
+        "GA": -1.9450684259078734,
+        "PSO-S": -2.1102741630904047,
+        "PSO-V": -1.7272908641200964,
+        "GWO-S": -1.6687114090423958,
+        "GWO-V": -1.572868351776573,
+        "WOA-S": -2.0828760489288,
+        "WOA-V": -1.32855675250138,
+        "SCA-S": -1.7998948319674273,
+        "SCA-V": -1.88498827901274,
+        "RS": -1.810768727908591,
+        "EA": -1.2861066097562484,
+        "SFS": -2.3046479634543666
+      },
+      "all_features_mean_pp": 0.0,
+      "per_dataset_pp": {
+        "Breastcancer": -1.015411308430292,
+        "CongressEW": -1.3556558105976706,
+        "Exactly": -0.2991436643664366,
+        "Exactly2": 0.239308097476415,
+        "HeartEW": 1.3425925925925928,
+        "Lymphography": -4.411706349206351,
+        "M-of-n": -0.47901915191519157,
+        "SpectEW": -2.9791157916157918,
+        "Tic-tac-toe": 0.5615254981310639,
+        "Vote": -1.680370164380176,
+        "WineEW": -5.059850146198831,
+        "Zoo": -6.385206228956229
+      }
+    },
+    "total": {
+      "mean_pp": 7.879155655543069,
+      "ci": [
+        4.653616024477428,
+        11.307596689052815
+      ],
+      "wilcoxon_p": 0.0009765625,
+      "per_method_mean_pp": {
+        "GA": 8.207031291997238,
+        "PSO-S": 8.273318388558005,
+        "PSO-V": 7.799185580357864,
+        "GWO-S": 7.6203471670009675,
+        "GWO-V": 7.964485592834431,
+        "WOA-S": 7.5358323840674055,
+        "WOA-V": 8.020434586790104,
+        "SCA-S": 8.045947778803262,
+        "SCA-V": 7.663708865193372,
+        "RS": 7.71356352595863,
+        "EA": 8.072302612321755,
+        "SFS": 7.633710092633794
+      },
+      "all_features_mean_pp": 0.0,
+      "per_dataset_pp": {
+        "Breastcancer": 3.544226712934614,
+        "CongressEW": 4.036377059632873,
+        "Exactly": 0.4307093209320932,
+        "Exactly2": 7.855891422475586,
+        "HeartEW": 16.759259259259256,
+        "Lymphography": 18.747767857142854,
+        "M-of-n": -0.04167333400006653,
+        "SpectEW": 15.124474291140958,
+        "Tic-tac-toe": 7.047012532404892,
+        "Vote": 5.044215795328142,
+        "WineEW": 6.769704592363264,
+        "Zoo": 9.231902356902358
+      }
+    },
+    "exact_optimum": {
+      "leak": {
+        "mean_pp": 12.430751919731662,
+        "ci": [
+          7.256321666006346,
+          17.964881186309665
+        ],
+        "wilcoxon_p": 0.001953125
+      },
+      "config": {
+        "mean_pp": -3.034414649116624,
+        "ci": [
+          -4.991090075385828,
+          -1.2049457906423207
+        ],
+        "wilcoxon_p": 0.013671875
+      },
+      "total": {
+        "mean_pp": 9.396337270615039,
+        "ci": [
+          5.629416081420423,
+          13.337318402026742
+        ],
+        "wilcoxon_p": 0.001953125
+      }
+    },
+    "leak_as_multiple_of_0p69pp_spread": 14.063459440819184,
+    "decision_rule_config_within_1pp": false,
+    "mean_hit_rate_on_half_tables": 0.36384259259259255
+  },
+  "X6": {
+    "original_suite": {
+      "n_datasets": 12,
+      "inflation_pp": 6.492717840161436,
+      "inflation_ci": [
+        4.029779871774581,
+        9.110946145592807
+      ],
+      "inflation_positive_datasets": 12,
+      "leak_free_spread_metaheuristics_pp": 0.6916736232313148,
+      "friedman_stat": 7.383754397185784,
+      "friedman_p": 0.7672095564781471,
+      "H1_mean_gap_points": 42.857142857142854,
+      "H1_supported": false,
+      "H2_smallest_p_holm": 1.0,
+      "H2_supported": true,
+      "H3_top_two": [
+        "SCA-S",
+        "PSO-V"
+      ],
+      "H3_top_two_gap_pp": 0.09527694058832914,
+      "H3_supported": true,
+      "H4_tau": 0.1818181818181818,
+      "H4_supported": true,
+      "X3_below_all_leak_free": 7,
+      "X3_wilcoxon_p": 0.791015625
+    },
+    "deduplicated_suite": {
+      "n_datasets": 12,
+      "inflation_pp": 7.4430226377247,
+      "inflation_ci": [
+        4.676995190629025,
+        10.412266311050834
+      ],
+      "inflation_positive_datasets": 12,
+      "leak_free_spread_metaheuristics_pp": 0.9826497519261124,
+      "friedman_stat": 4.785136815920404,
+      "friedman_p": 0.9411238458339397,
+      "H1_mean_gap_points": 44.095238095238095,
+      "H1_supported": false,
+      "H2_smallest_p_holm": 1.0,
+      "H2_supported": true,
+      "H3_top_two": [
+        "GWO-V",
+        "SCA-S"
+      ],
+      "H3_top_two_gap_pp": 0.15113414122790436,
+      "H3_supported": true,
+      "H4_tau": 0.2121212121212121,
+      "H4_supported": true,
+      "X3_below_all_leak_free": 8,
+      "X3_wilcoxon_p": 0.67724609375
+    }
+  },
+  "X8": {
+    "a_darwin-arm64": {
+      "replay_matches_verification_csv": true,
+      "mean_abs_diff_pp": 0.8179751574360395,
+      "per_dataset_mean_pp": {
+        "Breastcancer": 0.2181748565923618,
+        "CongressEW": 0.36534066826036654,
+        "Exactly": 1.1766196013289036,
+        "Exactly2": 0.9667774086378738,
+        "HeartEW": 0.10899642592449515,
+        "Lymphography": 1.450376140833238,
+        "M-of-n": 0.9713870431893687,
+        "SpectEW": 0.7928258034893952,
+        "Tic-tac-toe": 1.1252197061705482,
+        "Vote": 0.4828349944629015,
+        "WineEW": 0.2773449930627156,
+        "Zoo": 1.8798042472803076
+      },
+      "per_dataset_max_pp": {
+        "Breastcancer": 3.5714285714285716,
+        "CongressEW": 6.896551724137931,
+        "Exactly": 9.5,
+        "Exactly2": 7.5,
+        "HeartEW": 6.976744186046512,
+        "Lymphography": 17.24137931034483,
+        "M-of-n": 8.0,
+        "SpectEW": 9.433962264150944,
+        "Tic-tac-toe": 9.15032679738562,
+        "Vote": 10.0,
+        "WineEW": 7.142857142857143,
+        "Zoo": 17.647058823529413
+      }
+    },
+    "b_darwin-arm64": {
+      "original": {
+        "n_datasets": 7,
+        "inflation_pp": 5.035251654548902,
+        "inflation_ci": [
+          2.3326249204717837,
+          8.294046007655535
+        ],
+        "friedman_p": 0.8713469772247691,
+        "leak_free_spread_metaheuristics_pp": 1.2005055513234497,
+        "exact_optimum_inflation_pp": 5.571573033271215,
+        "exact_optimum_optimism_pp": 5.86324311551765
+      },
+      "sklearn": {
+        "n_datasets": 7,
+        "inflation_pp": 4.912223117796915,
+        "inflation_ci": [
+          2.4265749985045972,
+          7.8143493189185325
+        ],
+        "friedman_p": 0.6935530133880736,
+        "leak_free_spread_metaheuristics_pp": 1.6038548752834725,
+        "exact_optimum_inflation_pp": 5.591190510212485,
+        "exact_optimum_optimism_pp": 5.638808607851611
+      }
+    },
+    "a_linux-x86_64": {
+      "replay_matches_verification_csv": false,
+      "mean_abs_diff_pp": 0.6787034363701632,
+      "per_dataset_mean_pp": {
+        "Breastcancer": 0.19625763748472225,
+        "CongressEW": 0.36534066826036654,
+        "Exactly": 0.7340116279069767,
+        "Exactly2": 0.5896179401993356,
+        "HeartEW": 0.10622072277020897,
+        "Lymphography": 1.4257837858479396,
+        "M-of-n": 0.5760382059800665,
+        "SpectEW": 0.7928258034893952,
+        "Tic-tac-toe": 0.7183606096970222,
+        "Vote": 0.4828349944629015,
+        "WineEW": 0.2773449930627156,
+        "Zoo": 1.8798042472803076
+      },
+      "per_dataset_max_pp": {
+        "Breastcancer": 2.7027027027027026,
+        "CongressEW": 6.896551724137931,
+        "Exactly": 6.875,
+        "Exactly2": 7.0,
+        "HeartEW": 6.976744186046512,
+        "Lymphography": 16.666666666666668,
+        "M-of-n": 6.875,
+        "SpectEW": 9.433962264150944,
+        "Tic-tac-toe": 5.2356020942408374,
+        "Vote": 10.0,
+        "WineEW": 7.142857142857143,
+        "Zoo": 17.647058823529413
+      }
+    },
+    "c": {
+      "table_values_identical": true,
+      "subsets_compared": 36120,
+      "share_identical_pct_overall": 76.32890365448505,
+      "per_dataset_share_identical_pct": {
+        "Breastcancer": 83.75415282392026,
+        "CongressEW": 100.0,
+        "Exactly": 33.18936877076412,
+        "Exactly2": 37.308970099667775,
+        "HeartEW": 99.43521594684385,
+        "Lymphography": 93.92026578073089,
+        "M-of-n": 38.17275747508306,
+        "SpectEW": 100.0,
+        "Tic-tac-toe": 30.166112956810633,
+        "Vote": 100.0,
+        "WineEW": 100.0,
+        "Zoo": 100.0
+      }
+    }
+  },
+  "X10": {
+    "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+    "tables_rebuilt": 100,
+    "tables_identical": 100,
+    "x5_identity_folds": 60,
+    "x5_identity_holds": 60
+  }
+}

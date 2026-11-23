@@ -1,0 +1,13 @@
+dataset,share_identical_pct,tables_with_any_difference
+Breastcancer,83.75,10
+CongressEW,100,0
+Exactly,33.19,10
+Exactly2,37.31,10
+HeartEW,99.44,10
+Lymphography,93.92,10
+M-of-n,38.17,10
+SpectEW,100,0
+Tic-tac-toe,30.17,10
+Vote,100,0
+WineEW,100,0
+Zoo,100,0

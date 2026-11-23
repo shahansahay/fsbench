@@ -1,0 +1,13 @@
+dataset,mean,max,agreement_pct_median
+Breastcancer,0.2182,3.571,76.08
+CongressEW,0.3653,6.897,78.24
+Exactly,1.177,9.5,32.23
+Exactly2,0.9668,7.5,36.05
+HeartEW,0.109,6.977,96.01
+Lymphography,1.45,17.24,74.25
+M-of-n,0.9714,8,36.38
+SpectEW,0.7928,9.434,69.27
+Tic-tac-toe,1.125,9.15,30.23
+Vote,0.4828,10,77.41
+WineEW,0.2773,7.143,92.86
+Zoo,1.88,17.65,68.44

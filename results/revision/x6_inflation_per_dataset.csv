@@ -1,0 +1,13 @@
+dataset,inflation_original_pp,inflation_dedup_pp
+Breastcancer,2.92335,4.56327
+CongressEW,3.04375,4.06886
+Exactly,0.916667,1.22312
+Exactly2,5.42083,5.52664
+HeartEW,13.179,13.179
+Lymphography,14.9464,14.9464
+M-of-n,0.304167,0.14562
+SpectEW,10.6519,11.25
+Tic-tac-toe,5.71371,5.71371
+Vote,4.30556,5.07353
+WineEW,6.78902,6.78902
+Zoo,9.71825,16.8371

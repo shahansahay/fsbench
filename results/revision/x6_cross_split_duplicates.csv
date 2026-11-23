@@ -1,0 +1,13 @@
+dataset,share_same_pct_inner_validation,share_same_pct_outer_test,share_other_pct_inner_validation,share_other_pct_outer_test
+Breastcancer,35.24,39.77,0,0
+CongressEW,42,41.01,0,0.4608
+Exactly,8.75,9.9,0,0
+Exactly2,7.75,7.8,0,0
+HeartEW,0,0,0,0
+Lymphography,0,0,0,0
+M-of-n,8.625,9.2,0,0
+SpectEW,15.35,18.35,15.35,18.35
+Tic-tac-toe,0,0,0,0
+Vote,20.42,22.33,0,0
+WineEW,0,0,0,0
+Zoo,50,58.42,0,0

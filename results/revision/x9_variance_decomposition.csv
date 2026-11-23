@@ -1,0 +1,8 @@
+,sum_of_squares,share_pct
+dataset,17457.1,76.308
+method,117.625,0.514159
+protocol,3035.19,13.2673
+dataset_x_method,757.132,3.30955
+dataset_x_protocol,1467.16,6.41323
+method_x_protocol,2.39777,0.010481
+three_way,40.5591,0.177291
