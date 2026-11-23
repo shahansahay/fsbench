@@ -13,3 +13,5 @@ results/revision/x6_tables/*/*.npz
 results/revision/x5_raw/
 results/revision/x6_raw/
 results/revision/x8_raw_*/
+results/revision/x11_tables/*/*.npy
+results/revision/x11_raw/

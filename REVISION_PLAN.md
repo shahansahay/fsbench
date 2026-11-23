@@ -142,3 +142,67 @@ are reported whichever way they fall. X8(a) and X8(b) are reported for the Apple
 M2 machine, on which reports/verification.csv was produced, with the Linux values
 given as a check. X5 and X6 depend only on the tables and on numpy's generators
 and are run on both machines; their outputs are compared file by file.
+
+## Amendment 2 (23 November 2026, committed before X11 runs)
+
+Why: in X5 the configuration component of the 12-method mean was -1.79 pp with a
+95% interval of -3.14 to -0.56 pp, so the decision rule of X5 was not met and the
+leak component is reported separately, as that rule requires. That result stands
+and is reported. Each half of a test fold holds about 10% of a dataset's rows,
+fewer than the inner validation set (about 16%) on every fold, so the
+configuration component of X5 combines the training rows of protocol L with a
+smaller scoring set and cannot separate the two. X11 removes the difference in
+size. It was specified after the results of X5 were seen, and it is reported
+whichever way it falls. No other analysis is added.
+
+## X11 Size-matched control for inflation
+
+Design: each outer test fold T is dealt into five stratified parts P1 to P5 with
+stratified_folds(y_test, 5, seed_for(name, "fifth", fold, BASE_SEED)). For each
+part an exact table e_Pk (outer-train to Pk) is built with the code and rules of
+fsb/tables.py. Scaling is fitted on outer-train, as for e_test, so the five part
+tables sum to e_test for every subset; this identity is checked on all 60 folds
+before anything else is computed. A search that leaves out Pk takes its fitness
+from e_test - e_Pk, scored on n_test - |Pk| rows, about 16% of the dataset, the
+size of the inner validation set. It therefore uses the classifier of protocol L
+(trained on all outer-training rows) with a scoring set of the size protocol N
+uses. The returned subset is scored on Pk, which took no part in the search.
+
+Runs: for each part, the 12 methods with 30 seeds and ALL once, seeds
+seed_for(dataset, fold, "X11P" + k, method, alpha, budget, rep, BASE_SEED);
+1,000 oracle calls, alpha = 0.99; 12 x 5 x 5 x 361 = 108,300 runs.
+
+Quantities, per method, fold and seed index (pooling the five parts):
+- fresh accuracy: the test rows classified correctly by the subset chosen
+  without them, summed over the five parts, divided by n_test;
+- scoring accuracy: the mean over the five parts of the accuracy on the rows
+  that scored the search;
+- protocol N accuracy: the leak-free test accuracy of the subset returned under
+  protocol N by the same method, fold and seed index (main runs);
+- configuration component = fresh - protocol N; leak component = scoring -
+  fresh; sum = scoring - protocol N.
+Each is reduced as in the manuscript (median over seeds within a fold, mean over
+folds), for the 12-method mean, per method and per dataset; and the same three
+quantities for the exact optimum of each leave-one-part-out table (ties
+averaged) against the exact validation optimum. Because medians are not
+additive, the reduced sum can differ from the sum of the two reduced
+components; the difference is reported. Reported: means with 95%
+cluster-bootstrap intervals over datasets (10,000 resamples, generator seed
+20260919), two-sided Wilcoxon signed-rank P over the 12 datasets (unadjusted,
+exploratory), and the mean sizes of the scoring sets and of the inner
+validation sets.
+
+Decision rule for the wording of the manuscript: if the 95% interval of the
+configuration component of the 12-method mean lies within plus or minus 1 pp,
+the manuscript states that, with the scoring set matched in size, the training
+configuration of protocol L changed leak-free accuracy by less than 1 pp and the
+inflation is attributable to the reuse of the scoring rows. Otherwise the
+configuration component is reported as the effect of the training configuration,
+whatever its sign, and wherever the inflation is attributed it is described as
+the sum of the leak and configuration components, with both values given.
+
+Code: scripts/revision_x11.py (build, run, analyze), run on the Apple M2 machine.
+Results: results/revision/x11_tables/index.csv (the part tables themselves are
+not stored in git; their SHA-256 digests are in the index), x11_runs.csv.gz,
+x11_*_pp.csv, x11_exact_optimum_*.csv, x11_scoring_sizes.csv and "X11" in
+summary_revision.json, tagged revision-results-v2 when complete.
