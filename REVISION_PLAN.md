@@ -122,3 +122,23 @@ manuscript follows the result.
 Code: scripts/revision_*.py. Results: results/revision/ (tables as CSV, a summary
 JSON, run files). New tables live outside tables/ so that results-v1 is untouched.
 The results are tagged revision-results-v1 when complete.
+
+## Amendment 1 (23 November 2026, committed before X8 runs on the Apple M2 machine)
+
+X8(a) was run first on the Linux x86-64 machine. Replaying the generator of
+verify_tables.py drew the same subsets (the counts of checked subsets match
+reports/verification.csv), and the exact tables are identical on both machines
+(their SHA-256 digests match tables/index.csv), but the share of subsets on which
+scikit-learn 1.8.0 agreed with the tables did not match the recorded shares on
+datasets with many distance ties (Tic-tac-toe, fold 0, validation table: 0.50 on
+Linux against 0.29 recorded; Breastcancer, fold 0, test table: 0.76 against 0.72),
+while it matched on HeartEW (0.9568 on both). For the same subsets, therefore,
+scikit-learn's error counts differ between the two machines. Added analysis:
+
+X8c. X8(a) is run on both machines, and the error counts scikit-learn returns for
+the same subsets are compared between them: per dataset, the share of subsets with
+identical counts and the number of tables with at least one difference. Results
+are reported whichever way they fall. X8(a) and X8(b) are reported for the Apple
+M2 machine, on which reports/verification.csv was produced, with the Linux values
+given as a check. X5 and X6 depend only on the tables and on numpy's generators
+and are run on both machines; their outputs are compared file by file.
